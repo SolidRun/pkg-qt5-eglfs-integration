@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+DESTDIR=$(CURDIR)/debian/qt5-eglfs-integration-vivante
+
+export QT_SELECT := qt5
+
+%:
+	dh $@ --sourcedir=$(CURDIR)/eglfs_viv
+
+override_dh_auto_build:
+	replace /usr/lib/aarch64-linux-gnu/libEGL.so /usr/lib/galcore/libEGL.so -- eglfs_viv/Makefile
+	replace /usr/lib/aarch64-linux-gnu/libGLESv2.so /usr/lib/galcore/libGLESv2.so -- eglfs_viv/Makefile
+	dh_auto_build $@
+
+override_dh_auto_install:
+	install -v -m644 -D plugins/egldeviceintegrations/libqeglfs-viv-integration.so $(DESTDIR)/usr/lib/aarch64-linux-gnu/qt5/plugins/egldeviceintegrations/libqeglfs-viv-integration.so

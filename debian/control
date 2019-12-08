@@ -1,0 +1,21 @@
+Source: qt5-eglfs-integration
+Priority: optional
+Maintainer: Josua Mayer <josua@solid-run.com>
+Build-Depends:
+ debhelper (>= 11),
+ imx-gpu-viv-fb-dev,
+ libfontconfig-dev,
+ qtbase5-gles-dev,
+ qtbase5-private-gles-dev,
+ mariadb-server-10.3,
+Standards-Version: 4.1.3
+Section: libs
+Vcs-Browser: https://github.com/SolidRun/pkg-qt5-eglfs-integration
+Vcs-Git: https://github.com/SolidRun/pkg-qt5-eglfs-integration.git
+
+Package: qt5-eglfs-integration-vivante
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: eglfs backend for vivante
+ Provides an eglfs backend for QT that is compatible with the Vivante Binary GPU drivers.

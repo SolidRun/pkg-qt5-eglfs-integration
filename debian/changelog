@@ -1,0 +1,5 @@
+qt5-eglfs-integration (5.12.5) UNRELEASED; urgency=medium
+
+  * Initial Release.
+
+ -- Josua Mayer <josua@solid-run.com>  Sun, 08 Dec 2019 16:50:15 +0000

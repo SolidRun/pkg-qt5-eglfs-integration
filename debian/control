@@ -5,6 +5,7 @@ Build-Depends:
  debhelper (>= 11),
  imx-gpu-viv-fb-dev,
  libfontconfig-dev,
+ libwayland-dev,
  qtbase5-gles-dev,
  qtbase5-private-gles-dev,
  mariadb-server-10.3,
@@ -18,4 +19,13 @@ Architecture: any
 Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: eglfs backend for vivante
- Provides an eglfs backend for QT that is compatible with the Vivante Binary GPU drivers.
+ Provides an eglfs backend for QT that is compatible with the Vivante Binary GPU
+ drivers.
+
+Package: qt5-eglfs-integration-vivante-wayland
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: eglfs backend for vivante
+ Provides an eglfs backend for QT that is compatible with the Vivante Binary GPU
+ drivers.

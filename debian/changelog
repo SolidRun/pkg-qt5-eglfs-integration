@@ -1,4 +1,4 @@
-qt5-eglfs-integration (5.12.5) UNRELEASED; urgency=medium
+qt5-eglfs-integration (5.12.5) stable; urgency=medium
 
   * Initial Release.
 

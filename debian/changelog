@@ -1,3 +1,9 @@
+qt5-eglfs-integration (5.12.5+2) stable; urgency=medium
+
+  * explicitly link to correct EGL flavour
+
+ -- Josua Mayer <josua@solid-run.com>  Tue, 14 Apr 2020 16:17:28 +0000
+
 qt5-eglfs-integration (5.12.5+1) stable; urgency=medium
 
   * implement createDisplay method

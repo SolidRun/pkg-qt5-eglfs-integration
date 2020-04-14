@@ -76,6 +76,12 @@ EGLNativeDisplayType QEglFSVivWaylandIntegration::platformDisplay() const
     return mNativeDisplay;
 }
 
+EGLDisplay QEglFSVivWaylandIntegration::createDisplay(EGLNativeDisplayType nativeDisplay) {
+    EGLDisplay display;
+    display = eglGetDisplay(nativeDisplay);
+    return display;
+}
+
 EGLNativeWindowType QEglFSVivWaylandIntegration::createNativeWindow(QPlatformWindow *window, const QSize &size, const QSurfaceFormat &format)
 {
     Q_UNUSED(window)

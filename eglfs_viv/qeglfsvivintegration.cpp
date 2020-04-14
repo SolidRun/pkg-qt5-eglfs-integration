@@ -83,6 +83,12 @@ EGLNativeDisplayType QEglFSVivIntegration::platformDisplay() const
     return mNativeDisplay;
 }
 
+EGLDisplay QEglFSVivIntegration::createDisplay(EGLNativeDisplayType nativeDisplay) {
+    EGLDisplay display;
+    display = eglGetDisplay(nativeDisplay);
+    return display;
+}
+
 EGLNativeWindowType QEglFSVivIntegration::createNativeWindow(QPlatformWindow *window, const QSize &size, const QSurfaceFormat &format)
 {
     Q_UNUSED(window)

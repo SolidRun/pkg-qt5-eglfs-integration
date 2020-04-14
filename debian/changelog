@@ -1,3 +1,9 @@
+qt5-eglfs-integration (5.12.5+1) stable; urgency=medium
+
+  * implement createDisplay method
+
+ -- Josua Mayer <josua@solid-run.com>  Tue, 14 Apr 2020 15:07:54 +0000
+
 qt5-eglfs-integration (5.12.5) stable; urgency=medium
 
   * Initial Release.

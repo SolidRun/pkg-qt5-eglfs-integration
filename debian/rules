@@ -9,11 +9,11 @@ export QT_SELECT := qt5
 
 override_dh_auto_configure:
 	dh_auto_configure $@ --sourcedir=$(CURDIR)/eglfs_viv
-	replace /usr/lib/aarch64-linux-gnu/libEGL.so /usr/lib/galcore/fb/libEGL.so -- eglfs_viv/Makefile
-	replace /usr/lib/aarch64-linux-gnu/libGLESv2.so /usr/lib/galcore/fb/libGLESv2.so -- eglfs_viv/Makefile
+	replace lEGL "L/usr/lib/galcore/fb -lEGL" -- eglfs_viv/Makefile
+	replace lGLESv2 "L/usr/lib/galcore/fb -lGLESv2" -- eglfs_viv/Makefile
 	dh_auto_configure $@ --sourcedir=$(CURDIR)/eglfs_viv_wl
-	replace /usr/lib/aarch64-linux-gnu/libEGL.so /usr/lib/galcore/wl/libEGL.so -- eglfs_viv_wl/Makefile
-	replace /usr/lib/aarch64-linux-gnu/libGLESv2.so /usr/lib/galcore/wl/libGLESv2.so -- eglfs_viv_wl/Makefile
+	replace lEGL "L/usr/lib/galcore/wl -lEGL" -- eglfs_viv_wl/Makefile
+	replace lGLESv2 "L/usr/lib/galcore/wl -lGLESv2" -- eglfs_viv_wl/Makefile
 
 override_dh_auto_build:
 	dh_auto_build $@ --sourcedir=$(CURDIR)/eglfs_viv
